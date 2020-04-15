@@ -15,7 +15,11 @@
     <!-- Nav Item - Dashboard -->
     <!-- Heading -->
     <div class="sidebar-heading">
-        Admin
+        <?php if ($this->session->userdata('hak_akses') == 1) { ?>
+            Admin
+        <?php } else if ($this->session->userdata('hak_akses') == 2) { ?>
+            Manajer
+        <?php } ?>
     </div>
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('admin'); ?>">

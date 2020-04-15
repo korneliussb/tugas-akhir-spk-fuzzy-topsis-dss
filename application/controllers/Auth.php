@@ -66,7 +66,7 @@ class Auth extends CI_Controller
 
                     redirect('admin');
                 } elseif ($user['hak_akses'] == 2) {
-                    redirect('user');
+                    redirect('admin');
                 } else {
                     # arahkan ke view login
                     redirect('auth');

@@ -26,12 +26,15 @@
             <?php endif; ?>
 
             <!-- <h6 href="#" class="btn btn-primary m-0 font-weight-bold text-light">Tambah Pengguna</h6> -->
-            <a href="<?= base_url('user/tambahUser'); ?>" class="btn btn-primary btn-icon-split">
-                <span class="icon">
-                    <i class="fas fa-plus"></i>
-                </span>
-                <span class="text">Tambah</span>
-            </a>
+            <?php if ($this->session->userdata('hak_akses') == 1) { ?>
+                <a href="<?= base_url('user/tambahUser'); ?>" class="btn btn-primary btn-icon-split">
+                    <span class="icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">Tambah</span>
+                </a>
+            <?php } ?>
+
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -40,9 +43,11 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Pengguna</th>
-                            <th>Email</th>
+                            <th>Instansi</th>
                             <th>Hak Akses</th>
-                            <th>Aksi</th>
+                            <?php if ($this->session->userdata('hak_akses') == 1) { ?>
+                                <th>Aksi</th>
+                            <?php } ?>
 
                         </tr>
                     </thead>
@@ -51,9 +56,12 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Pengguna</th>
-                            <th>Email</th>
+                            <th>Instansi</th>
                             <th>Hak Akses</th>
-                            <th>Aksi</th>
+                            <?php if ($this->session->userdata('hak_akses') == 1) { ?>
+                                <th>Aksi</th>
+                            <?php } ?>
+
 
                         </tr>
                     </tfoot>
@@ -63,32 +71,35 @@
                             <tr>
                                 <td style="text-align: center"><?= $no++; ?></td>
                                 <td><?= $user['nama_user']; ?></td>
-                                <td><?= $user['email']; ?></td>
+                                <td><?= $user['instansi']; ?></td>
                                 <td><?php if ($user['hak_akses'] == 1) {
                                         echo 'Admin';
                                     } elseif ($user['hak_akses'] == 2) {
                                         echo 'Manajer';
                                     } ?></td>
-                                <td style="text-align: center">
-                                    <a href="<?= base_url(); ?>user/ubahUser/<?= $user['user_id']; ?>" class="btn btn-success btn-icon-split">
-                                        <span class="icon">
-                                            <i class="fas fa-edit"></i>
-                                        </span>
-                                        <span class="text">Ubah</span>
-                                    </a>
-                                    <a href="<?= base_url(); ?>user/detailUser/<?= $user['user_id']; ?>" class="btn btn-info btn-icon-split">
-                                        <span class="icon">
-                                            <i class="fas fa-info"></i>
-                                        </span>
-                                        <span class="text">Detail</span>
-                                    </a>
-                                    <a href="<?= base_url(); ?>user/hapusUser/<?= $user['user_id']; ?>" class="btn btn-danger btn-icon-split" onclick="return confirm('Yakin mau dihapus?');">
-                                        <span class="icon">
-                                            <i class="fas fa-trash"></i>
-                                        </span>
-                                        <span class="text">Hapus</span>
-                                    </a>
-                                </td>
+
+                                <?php if ($this->session->userdata('hak_akses') == 1) { ?>
+                                    <td style="text-align: center">
+                                        <a href="<?= base_url(); ?>user/ubahUser/<?= $user['user_id']; ?>" class="btn btn-success btn-icon-split">
+                                            <span class="icon">
+                                                <i class="fas fa-edit"></i>
+                                            </span>
+                                            <span class="text">Ubah</span>
+                                        </a>
+                                        <a href="<?= base_url(); ?>user/detailUser/<?= $user['user_id']; ?>" class="btn btn-info btn-icon-split">
+                                            <span class="icon">
+                                                <i class="fas fa-info"></i>
+                                            </span>
+                                            <span class="text">Detail</span>
+                                        </a>
+                                        <a href="<?= base_url(); ?>user/hapusUser/<?= $user['user_id']; ?>" class="btn btn-danger btn-icon-split" onclick="return confirm('Yakin mau dihapus?');">
+                                            <span class="icon">
+                                                <i class="fas fa-trash"></i>
+                                            </span>
+                                            <span class="text">Hapus</span>
+                                        </a>
+                                    </td>
+                                <?php } ?>
                             </tr>
                         <?php } ?>
                         <!-- <tr>
