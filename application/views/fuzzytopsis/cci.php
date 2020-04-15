@@ -31,6 +31,7 @@
                                 <td style="text-align: center"><?= $no++; ?></td>
                                 <td><?= $row->nama_alternatif; ?></td>
                                 <td><?= $row->cci; ?></td>
+                                <!-- <td><?= round($row->cci, 5); ?></td> -->
                             </tr>
                         <?php } ?>
 

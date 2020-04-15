@@ -15,7 +15,7 @@
 
         <!-- First Column -->
         <div class="col-lg-5">
-            <p class="mb-4">Daerah prioritas pembangunan embung adalah daerah XXX dengan nilai Koefisien Terdekat <em>(CCi)</em> sebesar YYY.</p>
+            <!-- <p class="mb-4">Daerah prioritas pembangunan embung adalah daerah XXX dengan nilai Koefisien Terdekat <em>(CCi)</em> sebesar YYY.</p> -->
 
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
