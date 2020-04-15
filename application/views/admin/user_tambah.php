@@ -48,11 +48,13 @@
                     <label for="hak_akses" class="col-sm-3 col-form-label">Hak Akses</label>
                     <div class="col-sm-7">
                         <select class="form-control" name="hak_akses">
-                            <option <?php set_value('hak_akses') == 1 ?> <?php echo "selected"; ?> value="1">Admin</option>
+                            <option <?php if (set_value('hak_akses') == 1) : ?> <?php echo "selected"; ?> <?php endif ?> value="1">Admin</option>
+                            <option <?php if (set_value('hak_akses') == 2) : ?> <?php echo "selected"; ?> <?php endif ?> value="2">Manager</option>
                         </select>
-                        <!-- <input type="text" name="hak_akses" class="form-control" placeholder="Admin" id="hak_akses" disabled value="1" readonly required> -->
 
-                        <!-- <input type="text" class="form-control" id="inputEmail3" name="namaadmin" placeholder="Nama Administrator" disabled value="<?php echo $e->nama_admin ?>" required> -->
+                        <!-- <option <?php set_value('hak_akses') == 1 ?> <?php echo "selected"; ?> value="1">Admin</option> -->
+
+
                     </div>
                 </div>
 

@@ -16,6 +16,9 @@ class User extends CI_Controller
         if (!$this->session->userdata('email')) {
             redirect('auth');
         }
+        // elseif (!$this->session->userdata['hak_akses'] != 1) {
+        //     redirect('kriteria');
+        // }
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
         // if ($this->User_model->isNotLogin()) redirect(site_url('auth'));
     }
@@ -23,6 +26,9 @@ class User extends CI_Controller
 
     public function index()
     {
+        // if (!$this->session->userdata['hak_akses'] != 1) {
+        //     redirect('kriteria');
+        // }
         $data['title'] = 'Data Pengguna';
         $data['pengguna'] = $this->User_model->getAllUser();
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
