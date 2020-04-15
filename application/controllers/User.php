@@ -118,19 +118,25 @@ class User extends CI_Controller
     //     $this->load->view('templates/footer.php');
     // }
 
-    public function detailUser($user_id)
+    public function detailUser($user_id = null)
     {
+        // if ($user_id == null) {
+        //     show_404();
+        //     return;
+        // }
+        // $user_id = $this->session->userdata['user_id'];
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Detail Pengguna';
         $data['pengguna'] = $this->User_model->getUserById($user_id);
-        if ($this->session->userdata('hak_akses') != 1 && $this->session->userdata('user_id') != $this->session->userdata('user_id')) { // dan user id nya tidak sama dengan user id user
+
+        if ($user_id == null || $this->session->userdata('hak_akses') != 1 && $this->session->userdata('user_id') != $user_id) {
+            // dan user id nya tidak sama dengan user id user
             $this->load->view('templates/header.php', $data);
             $this->load->view('templates/sidebar.php');
             $this->load->view('templates/topbar.php');
             $this->load->view('templates/404.php');
             $this->load->view('templates/footer.php');
         } else {
-            # code...
             $this->load->view('templates/header.php', $data);
             $this->load->view('templates/sidebar.php');
             $this->load->view('templates/topbar.php', $data);
@@ -139,7 +145,7 @@ class User extends CI_Controller
         }
     }
 
-    public function ubahUser($user_id)
+    public function ubahUser($user_id = null)
     {
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Ubah Pengguna';
@@ -163,7 +169,7 @@ class User extends CI_Controller
         // ]);
         // kurang Jenis kelamin dan hak akses
         if ($this->form_validation->run() == false) {
-            if ($this->session->userdata('hak_akses') != 1) {
+            if ($user_id == null || $this->session->userdata('hak_akses') != 1) {
                 $this->load->view('templates/header.php', $data);
                 $this->load->view('templates/sidebar.php');
                 $this->load->view('templates/topbar.php');
@@ -208,10 +214,12 @@ class User extends CI_Controller
         }
     }
 
-    public function hapusUser($user_id)
+    public function hapusUser($user_id = null)
     {
-        if ($this->session->userdata('hak_akses') != 1) {
-            $this->load->view('templates/header.php');
+        $data['title'] = '404';
+        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+        if ($user_id == null || $this->session->userdata('hak_akses') != 1) {
+            $this->load->view('templates/header.php', $data);
             $this->load->view('templates/sidebar.php');
             $this->load->view('templates/topbar.php');
             $this->load->view('templates/404.php');

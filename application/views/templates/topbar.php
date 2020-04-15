@@ -29,6 +29,7 @@
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="<?= base_url(); ?>user/detailUser/<?= $user['user_id']; ?>">
+                            <!-- <a class="dropdown-item" href="<?= base_url('user/detailUser'); ?>"> -->
                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-800"></i>
                             Profil
                         </a>

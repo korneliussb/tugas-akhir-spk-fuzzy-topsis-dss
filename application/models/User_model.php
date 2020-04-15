@@ -73,6 +73,12 @@ class User_model extends CI_Model
     public function getUserById($user_id)
     {
         return $this->db->get_where($this->_table, ['user_id' => $user_id])->row_array();
+        // $where = array(
+        //     'user_id' => $user_id
+        // );
+
+        // $query = $this->db->get_where('users', $where);
+        // return $query->row();
     }
 
     public function ubahDataUser($data)
@@ -90,4 +96,10 @@ class User_model extends CI_Model
         $this->db->where('user_id', $this->input->post('user_id'));
         $this->db->update($this->_table, $data2);
     }
+
+    // public function getDetail($user_id)
+    // {
+    //     return $this->db->get_where($this->_table, ['user_id' => $user_id])->row_array(); 
+    // }
+    //row?
 }
