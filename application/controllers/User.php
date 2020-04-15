@@ -123,7 +123,7 @@ class User extends CI_Controller
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Detail Pengguna';
         $data['pengguna'] = $this->User_model->getUserById($user_id);
-        if ($this->session->userdata('hak_akses') != 1) { // dan user id nya tidak sama dengan user id user
+        if ($this->session->userdata('hak_akses') != 1 && $this->session->userdata('user_id') != $this->session->userdata('user_id')) { // dan user id nya tidak sama dengan user id user
             $this->load->view('templates/header.php', $data);
             $this->load->view('templates/sidebar.php');
             $this->load->view('templates/topbar.php');
