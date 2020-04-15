@@ -48,11 +48,15 @@
                     <label for="hak_akses" class="col-sm-3 col-form-label">Hak Akses</label>
                     <div class="col-sm-7">
                         <select class="form-control" name="hak_akses">
-                            <option <?php set_value('hak_akses') == 1 ?> selected value="1">Admin</option>
+                            <?php foreach ($hak as $h) : ?>
+                                <?php if ($h == $pengguna['hak_akses']) : ?>
+                                    <option value="1" <?php if ($h == 1) : ?> selected <?php endif; ?>>Admin</option>
+                                    <option value="2" <?php if ($h == 2) : ?> selected <?php endif; ?>>Manajer</option>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            <!-- <option <?php set_value('hak_akses') == 1 ?> selected value="1">Admin</option> -->
                         </select>
-                        <!-- <input type="text" name="hak_akses" class="form-control" placeholder="Admin" id="hak_akses" disabled value="1" readonly required> -->
 
-                        <!-- <input type="text" class="form-control" id="inputEmail3" name="namaadmin" placeholder="Nama Administrator" disabled value="<?php echo $e->nama_admin ?>" required> -->
                     </div>
                 </div>
 

@@ -66,6 +66,8 @@
                                 <td><?= $user['email']; ?></td>
                                 <td><?php if ($user['hak_akses'] == 1) {
                                         echo 'Admin';
+                                    } elseif ($user['hak_akses'] == 2) {
+                                        echo 'Manajer';
                                     } ?></td>
                                 <td style="text-align: center">
                                     <a href="<?= base_url(); ?>user/ubahUser/<?= $user['user_id']; ?>" class="btn btn-success btn-icon-split">

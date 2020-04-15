@@ -49,7 +49,7 @@
                     <div class="col-sm-7">
                         <select class="form-control" name="hak_akses">
                             <option <?php if (set_value('hak_akses') == 1) : ?> <?php echo "selected"; ?> <?php endif ?> value="1">Admin</option>
-                            <option <?php if (set_value('hak_akses') == 2) : ?> <?php echo "selected"; ?> <?php endif ?> value="2">Manager</option>
+                            <option <?php if (set_value('hak_akses') == 2) : ?> <?php echo "selected"; ?> <?php endif ?> value="2">Manajer</option>
                         </select>
 
                         <!-- <option <?php set_value('hak_akses') == 1 ?> <?php echo "selected"; ?> value="1">Admin</option> -->

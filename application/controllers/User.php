@@ -119,6 +119,7 @@ class User extends CI_Controller
         $data['title'] = 'Ubah Pengguna';
         $data['pengguna'] = $this->User_model->getUserById($user_id);
         $data['jenisKelamin'] = [1, 2];
+        $data['hak'] = [1, 2];
 
         $this->form_validation->set_rules('email', 'email', 'required|valid_email', [
             'valid_email' => 'Masukkan email yang valid'
