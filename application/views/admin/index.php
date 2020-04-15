@@ -26,32 +26,23 @@
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Daerah</th>
-                                    <th>Nilai <em>CCi</em></th>
+                                <tr style="text-align: center">
+                                    <th>Peringkat</th>
+                                    <th>Alternatif</th>
+                                    <!-- <th>Nilai <em>CC<sub>i</sub></em></th> -->
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>System Architect</td>
-                                    <td>0.461</td>
-
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Accountant</td>
-                                    <td>0.612</td>
-
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Accountant</td>
-                                    <td>0.519</td>
-
-                                </tr>
+                                <?php $no = 1;
+                                foreach ($cci as $row) { ?>
+                                    <tr>
+                                        <td style="text-align: center"><?= $no++; ?></td>
+                                        <td><?= $row->nama_alternatif; ?></td>
+                                        <!-- <td><?= $row->cci; ?></td> -->
+                                        <!-- <td><?= round($row->cci, 5); ?></td> -->
+                                    </tr>
+                                <?php } ?>
 
                             </tbody>
                         </table>

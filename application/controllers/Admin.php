@@ -13,6 +13,8 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model("User_model");
+        $this->load->model('Alternatif_model');
+        $this->load->model('Nilai_model');
         // if ($this->User_model->isNotLogin()) redirect(site_url('auth'));
         if (!$this->session->userdata('email')) {
             redirect('auth');
@@ -28,6 +30,9 @@ class Admin extends CI_Controller
         // var_dump($data['user']);
 
         // $this->load->view('admin/admin_dashboard', $data);
+
+        $data['alternatif'] = $this->Alternatif_model->getAllAlternatif();
+        $data['cci'] = $this->Nilai_model->cci();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
