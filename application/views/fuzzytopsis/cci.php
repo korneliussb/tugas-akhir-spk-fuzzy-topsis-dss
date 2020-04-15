@@ -9,9 +9,9 @@
     <!-- <p class="mb-2"> <em>(Fuzzy Decision Matrix and Weight Value of Criteria)</em></p> -->
 
     <!-- DataTales Example -->
-    <p class="mb-2">
+    <!-- <p class="mb-2">
         <strong> Koefisiensi Terdekat <em>(Closeness Coefficient)</em></strong>
-    </p>
+    </p> -->
     <div class="card shadow mb-4 col-lg-8 ml-auto mr-auto">
         <div class="card-body">
             <div class="table-responsive">
