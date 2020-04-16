@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <!-- Heading -->
-    <div class="sidebar-heading">
+    <div class="sidebar-heading text-light">
         <?php if ($this->session->userdata('hak_akses') == 1) { ?>
             Admin
         <?php } else if ($this->session->userdata('hak_akses') == 2) { ?>

@@ -35,7 +35,7 @@ class NilaiBobotKriteria extends CI_Controller
         $this->load->view('templates/footer.php');
     }
 
-    public function ubahBobot($id_kriteria)
+    public function ubahBobot($id_kriteria = null)
     {
         $data['title'] = 'Nilai Bobot Kriteria';
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
@@ -57,11 +57,19 @@ class NilaiBobotKriteria extends CI_Controller
         $this->form_validation->set_rules('nilai_bobot3', 'nilai bobot 3', 'numeric');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/header.php', $data);
-            $this->load->view('templates/sidebar.php');
-            $this->load->view('templates/topbar.php');
-            $this->load->view('admin/nilaibobotkriteria_ubah.php'); // base nilaibobotkriteria/ubahBobot
-            $this->load->view('templates/footer.php');
+            if ($id_kriteria == null) {
+                $this->load->view('templates/header.php', $data);
+                $this->load->view('templates/sidebar.php');
+                $this->load->view('templates/topbar.php');
+                $this->load->view('templates/404.php');
+                $this->load->view('templates/footer.php');
+            } else {
+                $this->load->view('templates/header.php', $data);
+                $this->load->view('templates/sidebar.php');
+                $this->load->view('templates/topbar.php');
+                $this->load->view('admin/nilaibobotkriteria_ubah.php'); // base nilaibobotkriteria/ubahBobot
+                $this->load->view('templates/footer.php');
+            }
         } else {
             // $id_kr = $this->input->post('id_kriteria');
             $nama_kriteria = $this->input->post('nama_kriteria', true);
