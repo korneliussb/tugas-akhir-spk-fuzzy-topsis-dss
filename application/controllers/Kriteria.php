@@ -41,7 +41,7 @@ class Kriteria extends CI_Controller
         $this->load->view('templates/footer.php');
     }
 
-    public function ubahNilai($id)
+    public function ubahNilai($id = null)
     {
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Ubah Nilai';
@@ -56,15 +56,24 @@ class Kriteria extends CI_Controller
             // } elseif ($this->input->post('kembali')) {
             //     redirect('kriteria');
         } else {
-            $data["selectAlt"] = $this->Nilai_model->getAlternatifById($id);
-            // $data['view_name'] = "kriteria/updateNilai";
-            $data['flash'] = $this->session->flashdata('flash');
-            $data['intervals'] = $this->Alternatif_model->getIntervals();
-            $this->load->view('templates/header.php', $data);
-            $this->load->view('templates/sidebar.php');
-            $this->load->view('templates/topbar.php');
-            $this->load->view('kriteria/update_nilai', $data);
-            $this->load->view('templates/footer.php');
+            if ($id == null) {
+                $this->load->view('templates/header.php', $data);
+                $this->load->view('templates/sidebar.php');
+                $this->load->view('templates/topbar.php');
+                $this->load->view('templates/404.php');
+                $this->load->view('templates/footer.php');
+            } else {
+                # code...
+                $data["selectAlt"] = $this->Nilai_model->getAlternatifById($id);
+                // $data['view_name'] = "kriteria/updateNilai";
+                $data['flash'] = $this->session->flashdata('flash');
+                $data['intervals'] = $this->Alternatif_model->getIntervals();
+                $this->load->view('templates/header.php', $data);
+                $this->load->view('templates/sidebar.php');
+                $this->load->view('templates/topbar.php');
+                $this->load->view('kriteria/update_nilai', $data);
+                $this->load->view('templates/footer.php');
+            }
         }
     }
 }
