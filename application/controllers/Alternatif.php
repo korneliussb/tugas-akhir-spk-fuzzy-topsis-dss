@@ -83,7 +83,7 @@ class Alternatif extends CI_Controller
         // $this->load->view('templates/footer.php');
     }
 
-    public function ubahAlternatif($id_alternatif)
+    public function ubahAlternatif($id_alternatif = null)
     {
         $data['title'] = 'Ubah Alternatif';
         $data['alternatif'] = $this->Alternatif_model->getAlternatifById($id_alternatif);
@@ -92,11 +92,19 @@ class Alternatif extends CI_Controller
         $this->form_validation->set_rules('nama_alternatif', 'nama alternatif', 'trim|required');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/header.php', $data);
-            $this->load->view('templates/sidebar.php');
-            $this->load->view('templates/topbar.php');
-            $this->load->view('admin/alternatif_ubah.php', $data);
-            $this->load->view('templates/footer.php');
+            if ($id_alternatif == null) {
+                $this->load->view('templates/header.php', $data);
+                $this->load->view('templates/sidebar.php');
+                $this->load->view('templates/topbar.php');
+                $this->load->view('templates/404.php');
+                $this->load->view('templates/footer.php');
+            } else {
+                $this->load->view('templates/header.php', $data);
+                $this->load->view('templates/sidebar.php');
+                $this->load->view('templates/topbar.php');
+                $this->load->view('admin/alternatif_ubah.php', $data);
+                $this->load->view('templates/footer.php');
+            }
         } else {
 
             $data = [
@@ -109,10 +117,21 @@ class Alternatif extends CI_Controller
         }
     }
 
-    public function hapusAlternatif($id_alternatif)
+    public function hapusAlternatif($id_alternatif = null)
     {
-        $this->Alternatif_model->hapusDataAlternatif($id_alternatif);
-        $this->session->set_flashdata('flash', 'dihapus');
-        redirect('alternatif');
+        $data['title'] = '404';
+        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+
+        if ($id_alternatif == null) {
+            $this->load->view('templates/header.php', $data);
+            $this->load->view('templates/sidebar.php');
+            $this->load->view('templates/topbar.php');
+            $this->load->view('templates/404.php');
+            $this->load->view('templates/footer.php');
+        } else {
+            $this->Alternatif_model->hapusDataAlternatif($id_alternatif);
+            $this->session->set_flashdata('flash', 'dihapus');
+            redirect('alternatif');
+        }
     }
 }
