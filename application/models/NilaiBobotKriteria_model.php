@@ -39,6 +39,18 @@ class NilaiBobotKriteria_model extends CI_Model
         // exit;
     }
 
+    public function countKriteria()
+    {
+        $this->db->select('COUNT(id_kriteria) AS jumlah_kriteria');
+        $this->db->from('kriteria');
+        $query = $this->db->get();
+
+        $data = $query->row();
+        return $data;
+
+        // SELECT COUNT(id_alternatif) as jumlah_alternatif FROM alternatif
+    }
+
     // public function update_bobot($where, $data1, $table)
     // {
     //     $this->db->where($where);

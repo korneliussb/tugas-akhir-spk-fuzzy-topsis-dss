@@ -122,6 +122,18 @@ class Alternatif_model extends CI_Model
         return $this->db->get('intervals')->result();
     }
 
+    public function countAlternatif()
+    {
+        $this->db->select('COUNT(id_alternatif) AS jumlah_alternatif');
+        $this->db->from('alternatif');
+        $query = $this->db->get();
+
+        $data = $query->row();
+        return $data;
+
+        // SELECT COUNT(id_alternatif) as jumlah_alternatif FROM alternatif
+    }
+
     // belum, karena antar tabel
     // public function tambahDataAlternatif()
     // {

@@ -97,6 +97,32 @@ class User_model extends CI_Model
         $this->db->update($this->_table, $data2);
     }
 
+    public function countAdmin()
+    {
+        $this->db->select('COUNT(user_id) AS jumlah_admin');
+        $this->db->from('users');
+        $this->db->where('hak_akses = 1');
+        $query = $this->db->get();
+
+        $data = $query->row();
+        return $data;
+
+        // SELECT COUNT(user_id) as jumlah_admin FROM users WHERE hak_akses='1'
+    }
+
+    public function countManajer()
+    {
+        $this->db->select('COUNT(user_id) AS jumlah_manajer');
+        $this->db->from('users');
+        $this->db->where('hak_akses = 2');
+        $query = $this->db->get();
+
+        $data = $query->row();
+        return $data;
+
+        // SELECT COUNT(user_id) as jumlah_admin FROM users WHERE hak_akses='2'
+    }
+
     // public function getDetail($user_id)
     // {
     //     return $this->db->get_where($this->_table, ['user_id' => $user_id])->row_array(); 
