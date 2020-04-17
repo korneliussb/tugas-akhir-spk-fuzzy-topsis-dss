@@ -53,7 +53,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</li> -->
 					<li class="nav-item active">
 						<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg- active" role="button" aria-pressed="true">
-							<i class="fas fa-sign-in-alt"></i> Masuk
+							<i class="fas fa-sign-in-alt"></i>&nbsp; Masuk
 						</a>
 						<!-- <a class="nav-link " href="#">Masuk
 							<span class="sr-only">(current)</span>
@@ -75,6 +75,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<p class="lead mb-2 text-white">dirancang untuk menentukan prioritas pembangunan embung menggunakan metode <em>Fuzzy TOPSIS</em>
 						<p class="text-white lead"> di Kabupaten Semarang</p>
 					</p>
+					<!-- <div class="float-right">
+						<a class="btn btn-info text-light">SERASI</a>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -166,6 +169,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<div class="row">
 			<div class="col-md-5 card shadow">
+				<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary">Alternatif Terdaftar</h6>
+				</div>
 				<!-- Alternatif -->
 				<div class="card-body">
 					<div class="table-responsive">
@@ -197,6 +203,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 
 			<div class="col-md-6 card shadow">
+				<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary">Prioritas Terbaik</h6>
+				</div>
 				<!-- Peringkat -->
 				<div class="card-body">
 					<div class="table-responsive">
@@ -231,6 +240,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<br>
 		<div class="row">
 			<div class="card shadow ml-auto mr-auto col-md-10">
+				<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary">Nilai Bobot Kriteria</h6>
+				</div>
 				<!-- Nilai Bobot Kriteria-->
 				<div class="card-body">
 					<div class="table-responsive">
@@ -263,7 +275,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<!-- Akhir Nilai Bobot Kriteria-->
 			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="container-fluid">
 
+				<iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/7138dec4-d14a-4530-9579-62e740c0bc86/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			</div>
 		</div>
 
 

@@ -11,8 +11,7 @@
             <span class="text">Ubah Peta</span>
         </a>
     </div>
-    <!-- <iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/15c916e0-36e3-4843-994f-449de5771f95/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
-    <iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/639cd4c6-48ad-4df6-aea4-4877f8c25fa0/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    <iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/7138dec4-d14a-4530-9579-62e740c0bc86/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 </div>
 <!-- /.container-fluid -->

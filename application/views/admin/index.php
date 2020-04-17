@@ -145,13 +145,9 @@
                     <h6 class="m-0 font-weight-bold text-primary">Peta Kabupaten Semarang</h6>
                 </div>
                 <div class="card-body">
-                    <!-- <iframe width="100%" height="520" frameborder="0" src="https://agungmamet.carto.com/builder/5184ca33-3dc7-473e-91b5-0fa71e3a2692/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-                    <iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/15c916e0-36e3-4843-994f-449de5771f95/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
-                    <iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/639cd4c6-48ad-4df6-aea4-4877f8c25fa0/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-
+                    <iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/7138dec4-d14a-4530-9579-62e740c0bc86/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                     <!-- <div class="px-3 py-5 bg-gradient-primary text-white">.bg-gradient-primary</div> -->
-
                 </div>
             </div>
         </div>
