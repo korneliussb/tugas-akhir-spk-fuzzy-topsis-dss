@@ -31,8 +31,11 @@
 
                                 </form>
                                 <hr>
-                                <div class="text-center">
+                                <!-- <div class="text-center">
                                     <a class="small" href="<?= base_url(); ?>"> Lupa Password? Hubungi admin!</a>
+                                </div> -->
+                                <div class="text-center">
+                                    <a class="small" href="<?= base_url(); ?>"><i class="fas fa-arrow-left"></i> Kembali ke Halaman Utama</a>
                                 </div>
 
 

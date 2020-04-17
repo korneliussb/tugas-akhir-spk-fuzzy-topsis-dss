@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -18,8 +19,22 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct()
+	{
+		parent::__construct();
+
+		$this->load->model("Alternatif_model");
+		$this->load->model('NilaiBobotKriteria_model');
+		$this->load->model('Nilai_model');
+		// $this->load->model("User_model");
+	}
+
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data['alternatif'] = $this->Alternatif_model->getAllAlternatif();
+		$data['cci'] = $this->Nilai_model->cci();
+		$data['AllBobot'] = $this->NilaiBobotKriteria_model->getAllBobot();
+		$this->load->view('welcome_message', $data);
 	}
 }

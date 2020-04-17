@@ -30,27 +30,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="<?= base_url(); ?>"><strong>SPK - FT</strong></a>
+			<a class="navbar-brand" href="#home"><strong>SPK - FT</strong></a>
+			<!-- <?= base_url(); ?> -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
+
+					<li class="nav-item">
+						<a class="nav-link text-light" href="#">Data Alternatif</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="#">Data Kriteria</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="#">Peringkat</a>
+					</li>
 					<li class="nav-item active">
-						<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg- active" role="button" aria-pressed="true"><i class="fas fa-sign-in-alt"></i> Masuk</a>
+						<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg- active" role="button" aria-pressed="true">
+							<i class="fas fa-sign-in-alt"></i> Masuk
+						</a>
 						<!-- <a class="nav-link " href="#">Masuk
 							<span class="sr-only">(current)</span>
 						</a> -->
 					</li>
-					<!-- <li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Services</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li> -->
 				</ul>
 			</div>
 		</div>
@@ -143,6 +147,113 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-md-5 card shadow">
+				<!-- Alternatif -->
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered col-lg-5 ml-auto mr-auto" id="dataTable" width="100%" cellspacing="0">
+							<thead style="text-align: center">
+								<tr>
+									<th>No</th>
+									<th>Nama Alternatif</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php $no = 1;
+								foreach ($alternatif as $alter) { ?>
+									<tr>
+										<td style="text-align: center"><?= $no++; ?></td>
+										<td><?= $alter['nama_alternatif']; ?></td>
+
+									</tr>
+
+								<?php } ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- akhir Alternatif -->
+			</div>
+			<div class="col-md-1">
+				<!-- JARAK -->
+			</div>
+
+			<div class="col-md-6 card shadow">
+				<!-- Peringkat -->
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered ml-auto mr-auto display" id="" width="100%" cellspacing="0">
+							<thead style="text-align: center">
+								<tr>
+									<th>Peringkat</th>
+									<th>Alternatif</th>
+									<th>Nilai <em>CC<sub>i</sub> (Closeness Coefficient)</em></th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<?php $no = 1;
+								foreach ($cci as $row) { ?>
+									<tr>
+										<td style="text-align: center"><?= $no++; ?></td>
+										<td><?= $row->nama_alternatif; ?></td>
+										<td><?= $row->cci; ?></td>
+										<!-- <td><?= round($row->cci, 5); ?></td> -->
+									</tr>
+								<?php } ?>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- akhir Peringkat -->
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="card shadow ml-auto mr-auto">
+				<!-- Nilai Bobot Kriteria-->
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered display2" id="" width="100%" cellspacing="0">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Nama Kriteria</th>
+									<th>Nilai Bobot</th>
+									<th>Nilai Bobot</th>
+									<th>Nilai Bobot</th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<?php $no = 1;
+								foreach ($AllBobot as $bbt) { ?>
+									<tr>
+										<td style="text-align: center"><?= $no++; ?></td>
+										<td><?= $bbt['nama_kriteria']; ?></td>
+										<td><?= $bbt['nilai_bobot1']; ?></td>
+										<td><?= $bbt['nilai_bobot2']; ?></td>
+										<td><?= $bbt['nilai_bobot3']; ?></td>
+
+									</tr>
+								<?php } ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- Akhir Nilai Bobot Kriteria-->
+			</div>
+
+		</div>
+
+
+
+
+
+
 		<!-- /.row -->
 
 	</div>
@@ -159,6 +270,29 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Bootstrap core JavaScript -->
 	<script src="<?= base_url('assets/front/'); ?>vendor/jquery/jquery.min.js"></script>
 	<script src="<?= base_url('assets/front/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!--jQuery dibutuhkan oleh Bootstrap's JavaScript Plugins-->
+	<script src="<?= base_url('assets/front/'); ?>vendor/js/jquery-3.3.1.min.js"></script>
+
+
+	<!-- Page level plugins -->
+	<script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+	<script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+	<!-- Page level custom scripts -->
+	<script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('table.display').DataTable();
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			$('table.display2').DataTable();
+		});
+	</script>
+
 
 </body>
 

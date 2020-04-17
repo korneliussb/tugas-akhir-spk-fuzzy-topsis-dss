@@ -2,8 +2,18 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800"><?= $title; ?></h1>
-
+    <h1 class="h3 mb-0 text-gray-800"><?= $title; ?></h1>
+    <!-- RUMUS -->
+    <div class="card-header">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+            Rumus
+        </button>
+        <div class="collapse" id="collapse1">
+            <div class="card card-body">
+                <img class="img img-fluid" src="<?= base_url('assets'); ?>/img/t5.jpg" alt="Card image" overflow="hidden" width="30%" height="auto">
+            </div>
+        </div>
+    </div>
     <!-- Page Heading -->
     <!-- <h1 class="h3 mb-2 text-gray-800">Tables</h1> -->
     <!-- <p class="mb-2"> <em>(Fuzzy Decision Matrix and Weight Value of Criteria)</em></p> -->

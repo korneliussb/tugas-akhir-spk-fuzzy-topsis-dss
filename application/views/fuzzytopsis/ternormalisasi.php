@@ -2,7 +2,19 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800"><?= $title; ?></h1>
+    <h1 class="h3 mb-0 text-gray-800"><?= $title; ?></h1>
+
+    <!-- RUMUS -->
+    <div class="card-header">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+            Rumus
+        </button>
+        <div class="collapse" id="collapse1">
+            <div class="card card-body">
+                <img class="img img-fluid" src="<?= base_url('assets'); ?>/img/t2.jpg" alt="Card image" overflow="hidden" width="70%" height="auto">
+            </div>
+        </div>
+    </div>
 
     <!-- Page Heading -->
     <!-- <h1 class="h3 mb-2 text-gray-800">Tables</h1> -->
@@ -13,7 +25,7 @@
             <!--panggil bobot kriteria up-->
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <label for="">Matriks Keputusan <em>Fuzzy</em> 1</label>
+                    <label for="">Matriks Keputusan Normalisasi Terbobot <em>Fuzzy</em> 1</label>
                     <thead style="text-align: center">
                         <tr>
                             <!-- <th>No</th> -->
@@ -67,7 +79,7 @@
             <!--panggil bobot kriteria up-->
             <div class="table-responsive">
                 <table class="table table-bordered display" id="" width="100%" cellspacing="0">
-                    <label for="">Matriks Keputusan <em>Fuzzy</em> 2</label>
+                    <label for="">Matriks Keputusan Normalisasi Terbobot <em>Fuzzy</em> 2</label>
                     <thead style="text-align: center">
                         <tr>
                             <!-- <th>No</th> -->
@@ -123,7 +135,7 @@
             <!--panggil bobot kriteria up-->
             <div class="table-responsive">
                 <table class="table table-bordered display1" id="" width="100%" cellspacing="0">
-                    <label for="">Matriks Keputusan <em>Fuzzy</em> 3</label>
+                    <label for="">Matriks Keputusan Normalisasi Terbobot <em>Fuzzy</em> 3</label>
                     <thead style="text-align: center">
                         <tr>
                             <!-- <th>No</th> -->
