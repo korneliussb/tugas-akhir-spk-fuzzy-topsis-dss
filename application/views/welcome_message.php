@@ -68,10 +68,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<header class="bg-primary py-5 mb-5">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
-				<div class="col-lg-12">
+				<div class="col-lg-12 col-md-6">
+					<br>
 					<h1 class="display-4 text-white mt-2">Sistem Pendukung Keputusan</h1>
 					<h1 class="display text-white">Penentuan Prioritas Pembangunan Embung</h1>
-					<p class="lead mb-2 text-white">dirancang untuk menentukan prioritas pembangunan embung menggunakan metode <em>Fuzzy TOPSIS</em> di Kabupaten Semarang</p>
+					<p class="lead mb-2 text-white">dirancang untuk menentukan prioritas pembangunan embung menggunakan metode <em>Fuzzy TOPSIS</em>
+						<p class="text-white lead"> di Kabupaten Semarang</p>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -81,13 +84,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<div class="container">
 
 		<div class="row">
-			<div class="col-md-8 mb-5">
+			<div class="col-md-8 mb-0">
 				<h2>Tentang Sistem</h2>
 				<hr>
 				<!-- <p>L</p> -->
-				<p>Sistem ini memiliki fitur-fitur dasar CRUD (Create, Read, Update, dan Delete) dengan pengolahan data menggunakan metode <em>Fuzzy Technique for Order Performance by Similarity to Ideal Solution </em>(<em>Fuzzy</em> TOPSIS)
+				<p>Sistem ini memiliki fitur-fitur dasar <em>CRUD (Create, Read, Update, & Delete)</em> dengan pengolahan data menggunakan metode <em>Fuzzy TOPSIS </em>(<em>Technique for Order Performance by Similarity to Ideal Solution</em>)
 				</p>
-				<a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+				<div class="row ml-auto mr-auto">
+					<div class="col-md-4">
+						<h6 href=""><i class="fas fa-fw fa-map-marked"></i>&nbsp; Dukungan Carto Map</h6>
+						<h6 href=""><i class="fas fa-fw fa-database"></i>&nbsp; Data Dinamis</h6>
+					</div>
+					<div class="col-md-4">
+						<h6><i class="fas fa-fw fa-user-friends"></i>&nbsp; Multi Level User</h6>
+						<h6><i class="fas fa-fw fa-fire"></i>&nbsp; Framework Populer</h6>
+					</div>
+				</div>
+				<!-- <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a> -->
 			</div>
 			<div class="col-md-4 mb-5">
 				<h2>Butuh Bantuan <a class="fas fa-question"></a> </h2>
@@ -109,8 +122,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 		</div>
 		<!-- /.row -->
-
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-4 mb-5">
 				<div class="card h-100">
 					<img class="card-img-top" src="http://placehold.it/300x200" alt="">
@@ -150,7 +162,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="row">
 			<div class="col-md-5 card shadow">
@@ -218,7 +230,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 		<br>
 		<div class="row">
-			<div class="card shadow ml-auto mr-auto">
+			<div class="card shadow ml-auto mr-auto col-md-10">
 				<!-- Nilai Bobot Kriteria-->
 				<div class="card-body">
 					<div class="table-responsive">
@@ -268,7 +280,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<footer class="py-3 bg-dark">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy;
-				<a href="https://github.com/korneliussb">Kornelius Satria Budiyanto
+				<a class="text-info" href="https://github.com/korneliussb">Kornelius Satria Budiyanto
 				</a> 2020
 			</p>
 		</div>
