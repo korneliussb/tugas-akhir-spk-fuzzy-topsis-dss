@@ -153,7 +153,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<!-- Alternatif -->
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table table-bordered col-lg-5 ml-auto mr-auto" id="dataTable" width="100%" cellspacing="0">
+						<table class="table table-bordered ml-auto mr-auto" id="alternatif" width="100%" cellspacing="0">
 							<thead style="text-align: center">
 								<tr>
 									<th>No</th>
@@ -184,7 +184,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<!-- Peringkat -->
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table table-bordered ml-auto mr-auto display" id="" width="100%" cellspacing="0">
+						<table class="table table-bordered ml-auto mr-auto" id="peringkat" width="100%" cellspacing="0">
+							<!-- display -->
 							<thead style="text-align: center">
 								<tr>
 									<th>Peringkat</th>
@@ -217,7 +218,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<!-- Nilai Bobot Kriteria-->
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table table-bordered display2" id="" width="100%" cellspacing="0">
+						<table class="table table-bordered" id="kriteria" width="100%" cellspacing="0">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -271,7 +272,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<script src="<?= base_url('assets/front/'); ?>vendor/jquery/jquery.min.js"></script>
 	<script src="<?= base_url('assets/front/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!--jQuery dibutuhkan oleh Bootstrap's JavaScript Plugins-->
-	<script src="<?= base_url('assets/front/'); ?>vendor/js/jquery-3.3.1.min.js"></script>
+	<!-- <script src="<?= base_url('assets/front/'); ?>vendor/js/jquery-3.3.1.min.js"></script> -->
 
 
 	<!-- Page level plugins -->
@@ -281,15 +282,45 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Page level custom scripts -->
 	<script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
 
-	<script>
+	<!-- <script>
 		$(document).ready(function() {
 			$('table.display').DataTable();
 		});
-	</script>
+	</script> -->
 
 	<script>
 		$(document).ready(function() {
-			$('table.display2').DataTable();
+			$('#alternatif').DataTable({
+				language: {
+					searchPlaceholder: "Cari Data",
+					paginate: {
+						previous: "<",
+						next: ">"
+					}
+				}
+			});
+
+			$('#kriteria').DataTable({
+				// "dom": '<"pull-right"f><"pull-left"l>tip',
+				language: {
+					searchPlaceholder: "Cari Data",
+					paginate: {
+						previous: "<",
+						next: ">"
+					}
+				}
+			});
+
+			$('#peringkat').DataTable({
+				language: {
+					searchPlaceholder: "Cari Data",
+					paginate: {
+						previous: "<",
+						next: ">"
+					}
+				}
+			});
+
 		});
 	</script>
 
