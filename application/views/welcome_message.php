@@ -236,7 +236,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="table-responsive">
 						<table class="table table-bordered" id="kriteria" width="100%" cellspacing="0">
 							<thead>
-								<tr>
+								<tr style="text-align: center">
 									<th>No</th>
 									<th>Nama Kriteria</th>
 									<th>Nilai Bobot</th>
