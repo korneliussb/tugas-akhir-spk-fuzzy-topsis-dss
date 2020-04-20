@@ -9,9 +9,10 @@
         <div class="col-md-12">
             <form action="" method="POST">
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">ID Alternatif</label>
+                    <!-- komen dikit -->
+                    <!-- <label class="col-sm-2 col-form-label">ID Alternatif</label> -->
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-round" name="id_alternatif" readonly="readonly" value="<?= $gen; ?>">
+                        <input type="hidden" class="form-control form-control-round" name="id_alternatif" readonly="readonly" value="<?= $gen; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
