@@ -21,6 +21,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<!-- Custom styles for this template-->
 	<link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+	<link rel="icon" href="assets/img/favicon.ico" type="image/gif">
 
 </head>
 

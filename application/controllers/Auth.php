@@ -99,7 +99,7 @@ class Auth extends CI_Controller
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('hak_akses');
 
-        $this->session->set_flashdata('flash', '<div class="alert alert-success" role="alert">Anda telah keluar!</div>');
+        $this->session->set_flashdata('flash', '<div class="alert alert-success" role="alert">Anda telah keluar !</div>');
         redirect('auth');
     }
 }
