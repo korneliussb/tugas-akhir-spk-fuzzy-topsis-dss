@@ -11,7 +11,7 @@
         </button>
         <div class="collapse" id="collapse1">
             <div class="card card-body">
-                <img class="img img-fluid" src="<?= base_url('assets'); ?>/img/t4.jpg" alt="Card image" overflow="hidden" width="40%" height="auto">
+                <img class="img img-fluid" src="<?= base_url('assets'); ?>/img/t41.jpg" alt="Card image" overflow="hidden" width="50%" height="auto">
             </div>
         </div>
     </div>
