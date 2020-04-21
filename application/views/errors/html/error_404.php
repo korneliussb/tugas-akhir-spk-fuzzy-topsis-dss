@@ -56,7 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<div class="error mx-auto" data-text="404">404</div>
 						<p class="lead text-gray-800 mb-5">Halaman tidak ditemukan</p>
 						<p class="text-gray mb-0">Lebih baik anda kembali</p>
-						<a href="http://localhost/spkfu/"><i class="fas fa-arrow-left"></i>&nbsp; ke halaman utama</a>
+						<a href="http://localhost/spkfu/auth"><i class="fas fa-arrow-left"></i>&nbsp; ke halaman sebelumnya</a>
 					</div>
 
 				</div>
