@@ -80,6 +80,12 @@
 
             <script>
                 $(document).ready(function() {
+                    $('table.display4').DataTable();
+                });
+            </script>
+
+            <script>
+                $(document).ready(function() {
                     $('table.display5').DataTable();
                 });
             </script>

@@ -42,7 +42,8 @@
                             <tr>
                                 <td><?= $alter['nama_alternatif']; ?></td>
                                 <?php foreach ($dplus[$alter['id_alternatif']] as $d => $v) : ?>
-                                    <td><?= $v; ?></td>
+                                    <!-- <td><?= $v; ?></td> -->
+                                    <td><?= round($v, 5); ?></td>
                                 <?php endforeach; ?>
                             </tr>
                         <?php } ?>
@@ -123,7 +124,8 @@
                             <tr>
                                 <td><?= $alter['nama_alternatif']; ?></td>
                                 <?php foreach ($dneg[$alter['id_alternatif']] as $d => $v) : ?>
-                                    <td><?= $v; ?></td>
+                                    <td><?= round($v, 5); ?></td>
+                                    <!-- <td><?= $v; ?></td> -->
                                 <?php endforeach; ?>
                             </tr>
                         <?php } ?>
@@ -136,7 +138,7 @@
     <p class="mb-2">
         <strong> Jumlah Jarak antara alternatif dan FPIS (Distance between alternative and FPIS) dan <p>Jumlah Jarak antara alternatif dan FNIS <em>(Distance between alternative and FNIS)</em></p></strong>
     </p>
-    <div class="card shadow mb-4">
+    <div class="card shadow mb-0 col-lg-7 ml-auto mr-auto">
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered display5" id="" width="100%" cellspacing="0">
@@ -152,8 +154,10 @@
                         <?php foreach ($dAll as $row) { ?>
                             <tr>
                                 <td><?= $row->nama_alternatif; ?></td>
-                                <td><?= $row->dplus; ?></td>
-                                <td><?= $row->dneg; ?></td>
+                                <td><?= round($row->dplus, 5); ?></td>
+                                <td><?= round($row->dneg, 5); ?></td>
+                                <!-- <td><?= $row->dplus; ?></td>
+                                <td><?= $row->dneg; ?></td> -->
                             </tr>
                         <?php } ?>
                     </tbody>
