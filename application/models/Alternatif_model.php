@@ -67,14 +67,19 @@ class Alternatif_model extends CI_Model
     //     $this->db->insert($this->_alternatif, $data);
     // }
 
-    public function tambahAlternatif()
+    public function tambahAlternatif($data)
     {
-        $data = array(
-            'id_alternatif' => $this->input->post('id_alternatif'),
-            'nama_alternatif' => htmlspecialchars($this->input->post('nama_alternatif', true))
-        );
+        // $data = array(
+        //     'id_alternatif' => $this->input->post('id_alternatif'),
+        //     'nama_alternatif' => htmlspecialchars($this->input->post('nama_alternatif', true))
+        // );
+        $data2 = [
+            "id_alternatif" => $data['id_alternatif'],
+            "nama_alternatif" => $data['nama_alternatif']
+        ];
+
         // var_dump($data);
-        $this->db->insert($this->_alternatif, $data);
+        $this->db->insert($this->_alternatif, $data2);
     }
 
     public function getKodeOto($field, $table, $prefix, $length)

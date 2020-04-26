@@ -20,7 +20,8 @@
                     <label for="" class="col-sm-4 col-form-label">Nama Alternatif</label>
                     <div class="col-sm-6">
                         <!--5-->
-                        <input type="text" class="form-control" required placeholder="Masukkan nama alternatif ..." name="nama_alternatif" value="">
+                        <input type="text" class="form-control" id="nama_alternatif" required placeholder="Masukkan nama alternatif ..." name="nama_alternatif" value="">
+                        <small class="form-text text-danger"><?= form_error('nama_alternatif'); ?></small>
                         <!-- <input type="hidden" name="id_alternatif" value="<?= $row->id_alternatif; ?>"> -->
                     </div>
                 </div>

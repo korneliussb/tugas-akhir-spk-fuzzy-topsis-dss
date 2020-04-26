@@ -47,16 +47,39 @@ class Alternatif extends CI_Controller
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
 
         if ($this->input->post('nambahAlternatif')) {
-            foreach ($this->input->post() as $key => $value) {
-                if (strpos($key, "id_aspek_teknik-") !== false) {
-                    $k = str_replace('id_aspek_teknik-', '', $key);
-                    $this->Alternatif_model->tambahNilai($k);
+
+            $this->form_validation->set_rules('nama_alternatif', 'nama_alternatif', 'trim|required|is_unique[alternatif.nama_alternatif]', [
+                'is_unique' => 'Nama alternatif tersebut sudah dipakai.'
+            ]);
+
+            if ($this->form_validation->run() == false) {
+                $data["form"] = $this->Alternatif_model->getListForm();
+                $data['flash'] = $this->session->flashdata('flash');
+                $data['intervals'] = $this->Alternatif_model->getIntervals();
+                $data['gen'] = $this->Alternatif_model->getKodeOto('id_alternatif', 'alternatif', '', 2);
+                $this->load->view('templates/header.php', $data);
+                $this->load->view('templates/sidebar.php');
+                $this->load->view('templates/topbar.php');
+                $this->load->view('admin/alternatif_tambah.php', $data);
+                $this->load->view('templates/footer.php');
+            } else {
+                # code...
+                foreach ($this->input->post() as $key => $value) {
+                    if (strpos($key, "id_aspek_teknik-") !== false) {
+                        $k = str_replace('id_aspek_teknik-', '', $key);
+                        $this->Alternatif_model->tambahNilai($k);
+                    }
                 }
+                $data = array(
+                    'id_alternatif' => $this->input->post('id_alternatif'),
+                    'nama_alternatif' => htmlspecialchars($this->input->post('nama_alternatif', true))
+                );
+
+                $this->Alternatif_model->tambahAlternatif($data);
+                $this->session->set_flashdata('flash', 'ditambahkan');
+                redirect('alternatif');
             }
 
-            $this->Alternatif_model->tambahAlternatif();
-            $this->session->set_flashdata('flash', 'ditambahkan');
-            redirect('alternatif');
 
             // foreach ($this->input->post() as $key) {
             //     $this->Alternatif_model->tambahNilai($key);
@@ -89,7 +112,9 @@ class Alternatif extends CI_Controller
         $data['alternatif'] = $this->Alternatif_model->getAlternatifById($id_alternatif);
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->form_validation->set_rules('nama_alternatif', 'nama alternatif', 'trim|required');
+        $this->form_validation->set_rules('nama_alternatif', 'nama alternatif', 'trim|required|is_unique[alternatif.nama_alternatif]', [
+            'is_unique' => 'Nama alternatif tersebut sudah dipakai.'
+        ]);
 
         if ($this->form_validation->run() == false) {
             if ($id_alternatif == null) {
