@@ -47,7 +47,7 @@ class Alternatif extends CI_Controller
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
 
         if ($this->input->post('nambahAlternatif')) {
-
+            // form
             $this->form_validation->set_rules('nama_alternatif', 'nama_alternatif', 'trim|required|is_unique[alternatif.nama_alternatif]', [
                 'is_unique' => 'Nama alternatif tersebut sudah dipakai.'
             ]);
