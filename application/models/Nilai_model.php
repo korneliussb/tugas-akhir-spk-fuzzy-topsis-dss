@@ -471,7 +471,7 @@ class Nilai_model extends CI_Model
 
     public function getDisFPISk1()
     {
-        // gk jadi yg ini
+        // gk jadi yg ini, tidak dipakai ya
 
         // $query = $this->db->query("SELECT nama_alternatif, v_aplusk1.id_alternatif, dplus
         // from v_aplusk1, alternatif 
@@ -490,12 +490,56 @@ class Nilai_model extends CI_Model
         // return $rows;
     }
 
+    // public function v_normalisasi()
+    // {
+    //     $query =  $this->db->query(
+    //         "SELECT (intervals.fuzzy_number1 * kriteria.nilai_bobot1) as field_bobot1, 
+    //         (intervals.fuzzy_number2 * kriteria.nilai_bobot2) as field_bobot2, 
+    //         (intervals.fuzzy_number3 * kriteria.nilai_bobot3) as field_bobot3, 
+    //         alternatif.id_alternatif, kriteria.id_kriteria 
+    //         FROM aspek_teknik 
+    //         JOIN alternatif ON alternatif.id_alternatif = aspek_teknik.id_alternatif 
+    //         JOIN kriteria ON kriteria.id_kriteria = aspek_teknik.id_kriteria 
+    //         JOIN intervals ON intervals.id_kriteria = aspek_teknik.id_kriteria 
+    //         AND intervals.nilai_kriteria = aspek_teknik.nilai_kriteria");
+
+    //     return $query->result();
+    // }
+
+    //     public function v_aplusk1()
+    //     {
+    //         $query = $this->db->query(
+    //             "SELECT id_alternatif, id_kriteria, sqrt((1/3)*((pow(v_fpisk1.field_bobot1 - v_normalisasi.field_bobot1 ,2) 
+    //             + pow( v_fpisk1.field_bobot1 - v_normalisasi.field_bobot2 ,2) 
+    //             + pow( v_fpisk1.field_bobot1 - v_normalisasi.field_bobot3 ,2)))) 
+    //             AS dplus1"
+    //             );
+
+    //         SELECT v_normalisasi.id_alternatif, v_normalisasi.id_kriteria, 
+    // sqrt((1/3)*((pow(v_fpisk1.field_bobot1 - v_normalisasi.field_bobot1 ,2) 
+    // + pow( v_fpisk1.field_bobot1 - v_normalisasi.field_bobot2 ,2) 
+    // + pow( v_fpisk1.field_bobot1 - v_normalisasi.field_bobot3 ,2)))) 
+    // AS dplus1
+    // FROM v_normalisasi, v_fpisk1 
+    // WHERE v_normalisasi.id_kriteria = v_fpisk1.id_kriteria 
+    //     }
+
     public function getDplus()
     {
         $this->db->select('*');
         $this->db->from('v_dplus');
         $this->db->join('alternatif', 'alternatif.id_alternatif = v_dplus.id_alternatif');
         $this->db->join('kriteria', 'kriteria.id_kriteria = v_dplus.id_kriteria');
+
+
+        // SELECT v_aplusk1.id_alternatif, v_aplusk1.id_kriteria, v_aplusk1.dplus1 AS dplus 
+        // FROM v_aplusk1 UNION
+        // SELECT * FROM v_aplusk2 UNION
+        // SELECT * FROM v_aplusk3 UNION
+        // SELECT * FROM v_aplusk4 UNION
+        // SELECT * FROM v_aplusk5 UNION
+        // SELECT * FROM v_aplusk6 UNION
+        // SELECT * FROM v_aplusk7 
 
         $query = $this->db->get();
 
@@ -515,6 +559,15 @@ class Nilai_model extends CI_Model
         $this->db->join('alternatif', 'alternatif.id_alternatif = v_dneg.id_alternatif');
         $this->db->join('kriteria', 'kriteria.id_kriteria = v_dneg.id_kriteria');
 
+        // SELECT v_anegk1.id_alternatif, v_anegk1.id_kriteria, v_anegk1.dneg1 AS dneg 
+        // FROM v_anegk1 UNION
+        // SELECT * FROM v_anegk2 UNION
+        // SELECT * FROM v_anegk3 UNION
+        // SELECT * FROM v_anegk4 UNION
+        // SELECT * FROM v_anegk5 UNION
+        // SELECT * FROM v_anegk6 UNION
+        // SELECT * FROM v_anegk7 
+
         $query = $this->db->get();
 
         $rows = $query->result();
@@ -531,6 +584,11 @@ class Nilai_model extends CI_Model
         $this->db->select('*');
         $this->db->from('v_sum');
         $this->db->join('alternatif', 'alternatif.id_alternatif = v_sum.id_alternatif');
+
+        // v_sum
+        // SELECT v_sumneg.id_alternatif, v_sumneg.dneg, v_sumplus.dplus 
+        // FROM `v_sumneg` JOIN v_sumplus 
+        // WHERE v_sumplus.id_alternatif = v_sumneg.id_alternatif 
 
         $query = $this->db->get();
         $rows = $query->result();
