@@ -89,7 +89,7 @@ class NilaiBobotKriteria extends CI_Controller
             // var_dump($data1);
             // echo '</pre>';
 
-            $this->NilaiBobotKriteria_model->ubahBobot($data1); //$data
+            $this->NilaiBobotKriteria_model->ubahDataBobot($data1); //$data
             $this->session->set_flashdata('flash', 'diubah');
             redirect('nilaibobotkriteria');
         }

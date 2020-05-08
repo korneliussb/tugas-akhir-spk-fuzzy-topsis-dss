@@ -21,7 +21,7 @@ class NilaiBobotKriteria_model extends CI_Model
         return $this->db->get_where('kriteria', ['id_kriteria' => $id_kriteria])->row_array();
     }
 
-    public function ubahBobot($data1)
+    public function ubahDataBobot($data1)
     {
         $data2 = [
             "id_kriteria" => $data1['id_kriteria'],
