@@ -306,8 +306,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</footer>
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="<?= base_url('assets/front/'); ?>vendor/jquery/jquery.min.js"></script>
-	<script src="<?= base_url('assets/front/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="<?= base_url('assets/front/'); ?>vendor/jquery/jquery.min.js"></script>
+	<script src="<?= base_url('assets/front/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
+	<script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!--jQuery dibutuhkan oleh Bootstrap's JavaScript Plugins-->
 	<!-- <script src="<?= base_url('assets/front/'); ?>vendor/js/jquery-3.3.1.min.js"></script> -->
 
