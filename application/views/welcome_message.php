@@ -36,13 +36,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<div class="container">
 			<a class="navbar-brand" href="#home"><strong>SPK - FT</strong></a>
 			<!-- <?= base_url(); ?> -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
+			</button> -->
+
+			<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg-active" role="button" aria-pressed="true">
+				<i class="fas fa-sign-in-alt"></i>&nbsp; Masuk
+			</a>
+
+			<!-- <div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 
-					<!-- <li class="nav-item">
+					<li class="nav-item">
 						<a class="nav-link text-light" href="#">Data Alternatif</a>
 					</li>
 					<li class="nav-item">
@@ -50,17 +55,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-light" href="#">Peringkat</a>
-					</li> -->
+					</li>
 					<li class="nav-item active">
 						<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg- active" role="button" aria-pressed="true">
 							<i class="fas fa-sign-in-alt"></i>&nbsp; Masuk
 						</a>
-						<!-- <a class="nav-link " href="#">Masuk
+						<a class="nav-link " href="#">Masuk
 							<span class="sr-only">(current)</span>
-						</a> -->
+						</a>
 					</li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 	</nav>
 
@@ -225,8 +230,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<tr>
 										<td style="text-align: center"><?= $no++; ?></td>
 										<td><?= $row->nama_alternatif; ?></td>
-										<td><?= $row->cci; ?></td>
-										<!-- <td><?= round($row->cci, 5); ?></td> -->
+										<!-- <td><?= $row->cci; ?></td> -->
+										<td style="text-align: center"><?= round($row->cci, 5); ?></td>
 									</tr>
 								<?php } ?>
 
@@ -263,9 +268,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<tr>
 										<td style="text-align: center"><?= $no++; ?></td>
 										<td><?= $bbt['nama_kriteria']; ?></td>
-										<td><?= $bbt['nilai_bobot1']; ?></td>
-										<td><?= $bbt['nilai_bobot2']; ?></td>
-										<td><?= $bbt['nilai_bobot3']; ?></td>
+										<td style="text-align: center"><?= $bbt['nilai_bobot1']; ?></td>
+										<td style="text-align: center"><?= $bbt['nilai_bobot2']; ?></td>
+										<td style="text-align: center"><?= $bbt['nilai_bobot3']; ?></td>
 
 									</tr>
 								<?php } ?>
