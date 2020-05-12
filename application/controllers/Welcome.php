@@ -25,7 +25,7 @@ class Welcome extends CI_Controller
 		parent::__construct();
 
 		$this->load->model("Alternatif_model");
-		$this->load->model('NilaiBobotKriteria_model');
+		$this->load->model('Nilaibobotkriteria_model');
 		$this->load->model('Nilai_model');
 		// $this->load->model("User_model");
 	}
@@ -34,7 +34,7 @@ class Welcome extends CI_Controller
 	{
 		$data['alternatif'] = $this->Alternatif_model->getAllAlternatif();
 		$data['cci'] = $this->Nilai_model->cci();
-		$data['AllBobot'] = $this->NilaiBobotKriteria_model->getAllBobot();
+		$data['AllBobot'] = $this->Nilaibobotkriteria_model->getAllBobot();
 		$this->load->view('welcome_message', $data);
 	}
 }

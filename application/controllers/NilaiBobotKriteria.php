@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class NilaiBobotKriteria extends CI_Controller
+class Nilaibobotkriteria extends CI_Controller
 {
     // public function __construct()
     // {
@@ -14,7 +14,7 @@ class NilaiBobotKriteria extends CI_Controller
         // $this->load->model("product_model");
         $this->load->library('form_validation');
         // $this->load->model("User_model");
-        $this->load->model("NilaiBobotKriteria_model");
+        $this->load->model("Nilaibobotkriteria_model");
         if (!$this->session->userdata('email')) {
             redirect('auth');
         }
@@ -26,7 +26,7 @@ class NilaiBobotKriteria extends CI_Controller
     {
         $data['title'] = 'Nilai Bobot Kriteria';
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-        $data['AllBobot'] = $this->NilaiBobotKriteria_model->getAllBobot();
+        $data['AllBobot'] = $this->Nilaibobotkriteria_model->getAllBobot();
 
         $this->load->view('templates/header.php', $data);
         $this->load->view('templates/sidebar.php');
@@ -39,7 +39,7 @@ class NilaiBobotKriteria extends CI_Controller
     {
         $data['title'] = 'Nilai Bobot Kriteria';
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-        $data['bobot'] = $this->NilaiBobotKriteria_model->getBobotById($id_kriteria);
+        $data['bobot'] = $this->Nilaibobotkriteria_model->getBobotById($id_kriteria);
 
         // $this->load->view('templates/header.php', $data);
         // $this->load->view('templates/sidebar.php');
@@ -89,7 +89,7 @@ class NilaiBobotKriteria extends CI_Controller
             // var_dump($data1);
             // echo '</pre>';
 
-            $this->NilaiBobotKriteria_model->ubahDataBobot($data1); //$data
+            $this->Nilaibobotkriteria_model->ubahDataBobot($data1); //$data
             $this->session->set_flashdata('flash', 'diubah');
             redirect('nilaibobotkriteria');
         }

@@ -18,7 +18,7 @@ class Hitung extends CI_Controller
         $this->load->model('User_model');
         $this->load->model('Alternatif_model');
         $this->load->model('Nilai_model');
-        $this->load->model('NilaiBobotKriteria_model');
+        $this->load->model('Nilaibobotkriteria_model');
         if (!$this->session->userdata('email')) {
             redirect('auth');
         }
@@ -38,7 +38,7 @@ class Hitung extends CI_Controller
         $data['kriteria'] = $this->Nilai_model->getKriteria();
         $data['intervals'] = $this->Alternatif_model->getIntervals();
 
-        $data['AllBobot'] = $this->NilaiBobotKriteria_model->getAllBobot();
+        $data['AllBobot'] = $this->Nilaibobotkriteria_model->getAllBobot();
 
         $this->load->view('templates/header.php', $data);
         $this->load->view('templates/sidebar.php');

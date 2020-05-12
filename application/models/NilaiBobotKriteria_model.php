@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class NilaiBobotKriteria_model extends CI_Model
+class Nilaibobotkriteria_model extends CI_Model
 {
     #....
     // public function getTable()

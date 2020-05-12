@@ -14,7 +14,7 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model("User_model");
         $this->load->model('Alternatif_model');
-        $this->load->model('NilaiBobotKriteria_model');
+        $this->load->model('Nilaibobotkriteria_model');
         $this->load->model('Nilai_model');
         // if ($this->User_model->isNotLogin()) redirect(site_url('auth'));
         if (!$this->session->userdata('email')) {
@@ -36,7 +36,7 @@ class Admin extends CI_Controller
         $data['cci'] = $this->Nilai_model->cci();
 
         $data['jumlahAlternatif'] = $this->Alternatif_model->countAlternatif();
-        $data['jumlahKriteria'] = $this->NilaiBobotKriteria_model->countKriteria();
+        $data['jumlahKriteria'] = $this->Nilaibobotkriteria_model->countKriteria();
         $data['jumlahAdmin'] = $this->User_model->countAdmin();
         $data['jumlahManajer'] = $this->User_model->countManajer();
 
