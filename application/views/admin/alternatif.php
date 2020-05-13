@@ -10,7 +10,8 @@
             DataTables documentation</a>.</p> -->
 
     <!-- DataTales Example -->
-    <div class="card shadow mb-4 col-lg-10">
+    <div class="card shadow mb-4 col-lg-12">
+        <!-- col-lg-10 -->
         <div class="card-header py-2">
             <!-- <h6 href="#" class="btn btn-primary m-0 font-weight-bold text-light">Tambah Pengguna</h6> -->
             <a href="<?= base_url('alternatif/tambahAlternatif'); ?>" class="btn btn-primary btn-icon-split">

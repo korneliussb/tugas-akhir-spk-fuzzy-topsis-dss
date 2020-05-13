@@ -40,9 +40,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<span class="navbar-toggler-icon"></span>
 			</button> -->
 
+
+			<!-- <a href="<?= base_url('auth'); ?>" class="btn btn-info btn-lg-active" role="button" aria-pressed="true">
+				<i class="fas fa-play"></i>&nbsp; Panduan
+			</a> -->
+
 			<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg-active" role="button" aria-pressed="true">
 				<i class="fas fa-sign-in-alt"></i>&nbsp; Masuk
 			</a>
+
 
 			<!-- <div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
@@ -54,10 +60,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<a class="nav-link text-light" href="#">Data Kriteria</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-light" href="#">Peringkat</a>
+						<a class="btn btn-info btn-lg-active" href="<?= base_url('auth'); ?>">
+							<i class="fas fa-play"></i>&nbsp; Panduan
+						</a>
+					<li><a href="">&nbsp;</a></li>
 					</li>
 					<li class="nav-item active">
-						<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg- active" role="button" aria-pressed="true">
+						<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg-active" role="button" aria-pressed="true">
 							<i class="fas fa-sign-in-alt"></i>&nbsp; Masuk
 						</a>
 						<a class="nav-link " href="#">Masuk
@@ -110,11 +119,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<!-- <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a> -->
 			</div>
-			<div class="col-md-4 mb-5">
+			<div class="col-md-4 mb-1">
 				<h2>Butuh Bantuan <a class="fas fa-question"></a> </h2>
 				<hr>
+				<!-- <a href="<?= base_url('auth'); ?>" class="btn btn-info btn-lg-active" role="button" aria-pressed="true">
+					<i class="fas fa-play"></i>&nbsp; Panduan
+				</a> -->
+				<div class="">
+					<a href="https://youtube.com" target="_blank" class="btn btn-info btn-lg-active fa-pull-right" role="button" aria-pressed="true">
+						<i class="fas fa-play"></i>&nbsp; Panduan
+					</a>
+				</div>
 				<address>
-					<a href=""></a>
+					<!-- <a href=""></a> -->
 					<strong>Hubungi Admin <a class="fas fa-user-cog"></a></strong>
 					<br>Kornelius Satria B
 					<br>Universitas Diponegoro

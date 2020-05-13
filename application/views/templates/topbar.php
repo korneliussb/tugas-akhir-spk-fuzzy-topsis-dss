@@ -11,6 +11,10 @@
                 <i class="fa fa-bars"></i>
             </button>
             <!-- <h1 class="h3 mt-1 mb-1 ml-2 text-gray-800"><?= $title; ?></h1> -->
+            &nbsp;&nbsp;
+            <a href="https://youtube.com" target="_blank" class="btn btn-info btn-lg-active" role="button" aria-pressed="true">
+                <i class="fas fa-play"></i>&nbsp; Panduan
+            </a>
 
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
