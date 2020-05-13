@@ -3,7 +3,7 @@
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
-        <div class="col-lg-5">
+        <div class="col-lg-4">
 
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
@@ -12,7 +12,7 @@
                         <div class="col-lg">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4"><?= $title; ?></h1>
+                                    <h1 class="h4 text-gray-900 mb-4"><strong><?= $title; ?></strong></h1>
                                 </div>
                                 <?= $this->session->flashdata('flash'); ?>
                                 <form class="user" method="post" action="">
@@ -22,11 +22,11 @@
                                         <small class="form-text text-danger"><?= form_error('email'); ?></small>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+                                        <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Masukkan Password . . .">
                                         <small class="form-text text-danger"><?= form_error('password'); ?></small>
                                     </div>
                                     <button type="submit" name="auth" class="btn btn-primary btn-user btn-block">
-                                        <strong>Login</strong>
+                                        <strong>Masuk</strong>
                                     </button>
 
                                 </form>

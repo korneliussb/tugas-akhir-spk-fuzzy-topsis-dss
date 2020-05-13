@@ -10,7 +10,8 @@
             DataTables documentation</a>.</p> -->
 
     <!-- DataTales Example -->
-    <div class="card shadow mb-4 col-lg-11">
+    <!-- col-lg-11 -->
+    <div class="card shadow mb-4 col-lg-12 col-md-5">
         <?php if ($this->session->flashdata()) : ?>
             <div class="row mt-3">
                 <div class="col-md-6">
@@ -27,7 +28,7 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
+                        <tr style="text-align: center">
                             <th>No</th>
                             <th>Nama Kriteria</th>
                             <th>Nilai Bobot</th>
@@ -41,9 +42,9 @@
                             <tr>
                                 <td style="text-align: center"><?= $bbt['id_kriteria']; ?></td>
                                 <td><?= $bbt['nama_kriteria']; ?></td>
-                                <td><?= $bbt['nilai_bobot1']; ?></td>
-                                <td><?= $bbt['nilai_bobot2']; ?></td>
-                                <td><?= $bbt['nilai_bobot3']; ?></td>
+                                <td style="text-align: center"><?= $bbt['nilai_bobot1']; ?></td>
+                                <td style="text-align: center"><?= $bbt['nilai_bobot2']; ?></td>
+                                <td style="text-align: center"><?= $bbt['nilai_bobot3']; ?></td>
                                 <td style="text-align: center">
                                     <!-- <a href="" class="btn btn-success btn-icon-split">
                                     <span class="fas fa-edit"> Ubah</span>
