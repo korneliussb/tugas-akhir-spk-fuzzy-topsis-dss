@@ -126,7 +126,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<i class="fas fa-play"></i>&nbsp; Panduan
 				</a> -->
 				<div class="">
-					<a href="https://youtube.com" target="_blank" class="btn btn-info btn-lg-active fa-pull-right" role="button" aria-pressed="true">
+					<a href="https://youtu.be/OY-DeBSA31M" target="_blank" class="btn btn-info btn-lg-active fa-pull-right" role="button" aria-pressed="true">
 						<i class="fas fa-play"></i>&nbsp; Panduan
 					</a>
 				</div>
