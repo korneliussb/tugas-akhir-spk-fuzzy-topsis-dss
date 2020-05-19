@@ -45,6 +45,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<i class="fas fa-play"></i>&nbsp; Panduan
 			</a> -->
 
+			<a href="https://youtu.be/OY-DeBSA31M" target="_blank" class="btn btn-info btn-lg-active fa-pull-right" role="button" aria-pressed="true">
+				<i class="fas fa-play"></i>&nbsp; Panduan
+			</a>
+
+
 			<a href="<?= base_url('auth'); ?>" class="btn btn-primary btn-lg-active" role="button" aria-pressed="true">
 				<i class="fas fa-sign-in-alt"></i>&nbsp; Masuk
 			</a>
@@ -101,50 +106,37 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<div class="container">
 
 		<div class="row">
-			<div class="col-md-8 mb-0">
+			<div style="text-align:center;" class="col-md-12 mb-0">
+				<hr>
 				<h2>Tentang Sistem</h2>
 				<hr>
+
 				<!-- <p>L</p> -->
-				<p>Sistem ini memiliki fitur-fitur dasar <em>CRUD (Create, Read, Update, & Delete)</em> dengan pengolahan data menggunakan metode <em>Fuzzy TOPSIS </em>(<em>Technique for Order Performance by Similarity to Ideal Solution</em>)
-				</p>
+				<h5>Sistem ini memiliki fitur-fitur dasar <em>CRUD (Create, Read, Update, & Delete)</em> dengan pengolahan data menggunakan metode <em>Fuzzy TOPSIS </em>(<em>Technique for Order of Preference by Similarity to Ideal Solution</em>)
+				</h5>
+				<br>
 				<div class="row ml-auto mr-auto">
-					<div class="col-md-4">
-						<h6 href=""><i class="fas fa-fw fa-map-marked"></i>&nbsp; Dukungan Carto Map</h6>
-						<h6 href=""><i class="fas fa-fw fa-database"></i>&nbsp; Data Dinamis</h6>
+					<div class="col-md-3">
+						<h1 href=""><i class="fas fa-fw fa-map-marked"></i></h1>
+						<h5 href="">&nbsp; Dukungan Carto Map</h5>
 					</div>
-					<div class="col-md-4">
-						<h6><i class="fas fa-fw fa-user-friends"></i>&nbsp; Multi Level User</h6>
-						<h6><i class="fas fa-fw fa-fire"></i>&nbsp; Framework Populer</h6>
+					<div class="col-md-3">
+						<h1 href=""><i class="fas fa-fw fa-database"></i></h1>
+						<h5 href="">&nbsp; Data Dinamis</h5>
+					</div>
+					<div class="col-md-3">
+						<h1 href=""><i class="fas fa-fw fa-user-friends"></i></h1>
+						<h5 href="">&nbsp; Multi Level User</h5>
+					</div>
+					<div class="col-md-3">
+						<h1 href=""><i class="fas fa-fw fa-fire"></i></h1>
+						<h5 href="">&nbsp; Framework Populer</h5>
 					</div>
 				</div>
+				<hr>
 				<!-- <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a> -->
 			</div>
-			<div class="col-md-4 mb-1">
-				<h2>Butuh Bantuan <a class="fas fa-question"></a> </h2>
-				<hr>
-				<!-- <a href="<?= base_url('auth'); ?>" class="btn btn-info btn-lg-active" role="button" aria-pressed="true">
-					<i class="fas fa-play"></i>&nbsp; Panduan
-				</a> -->
-				<div class="">
-					<a href="https://youtu.be/OY-DeBSA31M" target="_blank" class="btn btn-info btn-lg-active fa-pull-right" role="button" aria-pressed="true">
-						<i class="fas fa-play"></i>&nbsp; Panduan
-					</a>
-				</div>
-				<address>
-					<!-- <a href=""></a> -->
-					<strong>Hubungi Admin <a class="fas fa-user-cog"></a></strong>
-					<br>Kornelius Satria B
-					<br>Universitas Diponegoro
-					<br>
-				</address>
-				<address>
-					<abbr title="Telegram"><i class="fab fa-telegram-plane"></i></abbr>
-					<a href="https://t.me/korneliussatria">Kirim pesan via Telegram</a>
-					<br>
-					<abbr title="Email"><i class="fa fa-envelope"></i></abbr>
-					<a href="mailto:korneliussb@student.ce.undip.ac.id">Hubungi via <em>email</em></a>
-				</address>
-			</div>
+
 		</div>
 		<!-- /.row -->
 		<!-- <div class="row">
@@ -188,11 +180,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 			</div>
 		</div> -->
-
+		<br>
+		<br>
 		<div class="row">
 			<div class="col-md-5 card shadow">
 				<div class="card-header py-3">
-					<h6 class="m-0 font-weight-bold text-primary">Alternatif Terdaftar</h6>
+					<h5 class="m-0 font-weight-bold text-primary">Alternatif Terdaftar</h5>
 				</div>
 				<!-- Alternatif -->
 				<div class="card-body">
@@ -226,7 +219,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 			<div class="col-md-6 card shadow">
 				<div class="card-header py-3">
-					<h6 class="m-0 font-weight-bold text-primary">Prioritas Terbaik</h6>
+					<h5 class="m-0 font-weight-bold text-primary">Prioritas Terbaik</h5>
 				</div>
 				<!-- Peringkat -->
 				<div class="card-body">
@@ -260,10 +253,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 		</div>
 		<br>
+		<br>
 		<div class="row">
-			<div class="card shadow ml-auto mr-auto col-md-10">
+			<div class="card shadow ml-auto mr-auto col-md-12">
 				<div class="card-header py-3">
-					<h6 class="m-0 font-weight-bold text-primary">Nilai Bobot Kriteria</h6>
+					<h5 class="m-0 font-weight-bold text-primary">Nilai Bobot Kriteria</h5>
 				</div>
 				<!-- Nilai Bobot Kriteria-->
 				<div class="card-body">
@@ -305,6 +299,46 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<iframe width="100%" height="520" frameborder="0" src="https://korneliussb.carto.com/builder/7138dec4-d14a-4530-9579-62e740c0bc86/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 			</div>
 		</div>
+		<br>
+		<div style="text-align:center;" class="col-md-12 mb-1">
+			<hr>
+			<h2>Butuh Bantuan <a class="fas fa-question"></a> </h2>
+			<hr>
+			<!-- <a href="<?= base_url('auth'); ?>" class="btn btn-info btn-lg-active" role="button" aria-pressed="true">
+					<i class="fas fa-play"></i>&nbsp; Panduan
+				</a> -->
+
+			<address>
+				<!-- <a href=""></a> -->
+				<h5>Hubungi Admin <a class="fas fa-user-cog"></a></h5>
+				<h6>Kornelius Satria B</h6>
+				<h6>Universitas Diponegoro</h6>
+				<br>
+			</address>
+			<div class="row">
+				<div class="col-md-3">
+
+				</div>
+				<div class="col-md-3">
+					<h1 href=""><i class="fab fa-telegram-plane"></i></h1>
+					<a href="https://t.me/korneliussatria">&nbsp; <h5>Kirim pesan via Telegram</h5></a>
+				</div>
+				<div class="col-md-3">
+					<h1 href=""><i class="fa fa-envelope"></i></h1>
+					<a href="mailto:korneliussb@student.ce.undip.ac.id">&nbsp; <h5>Hubungi via <em>email</em></h5></a>
+				</div>
+				<div class="col-md-3">
+
+				</div>
+				<!-- <abbr title="Telegram"><i class="fab fa-telegram-plane"></i></abbr>
+					<a href="https://t.me/korneliussatria">Kirim pesan via Telegram</a>
+					<br>
+					<abbr title="Email"><i class="fa fa-envelope"></i></abbr>
+					<a href="mailto:korneliussb@student.ce.undip.ac.id">Hubungi via <em>email</em></a> -->
+			</div>
+		</div>
+		<br>
+		<br>
 
 
 
