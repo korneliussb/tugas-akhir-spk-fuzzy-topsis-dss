@@ -50,7 +50,7 @@
                                 <td><?= $alter['nama_alternatif']; ?></td>
                                 <!-- <td><?= $alter['nilai_interval']; ?></td> -->
                                 <?php foreach ($nilai[$alter['id_alternatif']] as $k => $v) : ?>
-                                    <td><?= $v; ?></td>
+                                    <td style="text-align: center"><?= $v; ?></td>
                                 <?php endforeach; ?>
 
                                 <!-- <td>FOrest</td>
