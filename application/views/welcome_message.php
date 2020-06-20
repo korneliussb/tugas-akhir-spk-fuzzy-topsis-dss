@@ -267,9 +267,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<tr style="text-align: center">
 									<th>No</th>
 									<th>Nama Kriteria</th>
-									<th>Nilai Bobot</th>
-									<th>Nilai Bobot</th>
-									<th>Nilai Bobot</th>
+									<th>Nilai Bobot Fuzzy Terendah</th>
+									<th>Nilai Bobot Fuzzy Tengah</th>
+									<th>Nilai Bobot Fuzzy Tertinggi</th>
 
 								</tr>
 							</thead>
