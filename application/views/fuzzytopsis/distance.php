@@ -43,7 +43,7 @@
                                 <td><?= $alter['nama_alternatif']; ?></td>
                                 <?php foreach ($dplus[$alter['id_alternatif']] as $d => $v) : ?>
                                     <!-- <td><?= $v; ?></td> -->
-                                    <td><?= round($v, 5); ?></td>
+                                    <td><?= round($v, 3); ?></td>
                                 <?php endforeach; ?>
                             </tr>
                         <?php } ?>
@@ -124,7 +124,7 @@
                             <tr>
                                 <td><?= $alter['nama_alternatif']; ?></td>
                                 <?php foreach ($dneg[$alter['id_alternatif']] as $d => $v) : ?>
-                                    <td><?= round($v, 5); ?></td>
+                                    <td><?= round($v, 3); ?></td>
                                     <!-- <td><?= $v; ?></td> -->
                                 <?php endforeach; ?>
                             </tr>
